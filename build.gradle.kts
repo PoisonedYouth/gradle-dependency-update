@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.8.0"
-    id("io.ktor.plugin") version "2.2.1"
+    kotlin("jvm")
+    id("io.ktor.plugin")
 }
 
 group = "com.poisonedyouth"

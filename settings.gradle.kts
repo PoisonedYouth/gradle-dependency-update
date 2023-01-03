@@ -18,3 +18,17 @@ dependencyResolutionManagement {
         }
     }
 }
+
+pluginManagement{
+    val ktorVersion: String by settings
+    val kotlinVersion: String by settings
+
+    plugins {
+        id("io.ktor.plugin") version ktorVersion
+        kotlin("jvm") version kotlinVersion
+    }
+
+    repositories{
+        gradlePluginPortal()
+    }
+}
