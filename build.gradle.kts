@@ -1,7 +1,3 @@
-val ktor_version: String by project
-val kotlin_version: String by project
-val logback_version: String by project
-
 plugins {
     kotlin("jvm") version "1.8.0"
     id("io.ktor.plugin") version "2.2.1"
@@ -21,12 +17,12 @@ repositories {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-auth-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
-    implementation("io.ktor:ktor-serialization-jackson-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
-    implementation("ch.qos.logback:logback-classic:$logback_version")
-    testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+    implementation(libs.ktorServerCoreJvm)
+    implementation(libs.ktorServerAuthJvm)
+    implementation(libs.ktorServerContentNegotiationJvm)
+    implementation(libs.ktorServerJacksonJvm)
+    implementation(libs.ktorServerNettyJvm)
+    implementation(libs.logback)
+    testImplementation(libs.ktorServerTestsJvm)
+    testImplementation(libs.kotlinTestJunit)
 }
