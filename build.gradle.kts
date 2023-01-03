@@ -17,11 +17,7 @@ repositories {
 }
 
 dependencies {
-    implementation(libs.ktorServerCoreJvm)
-    implementation(libs.ktorServerAuthJvm)
-    implementation(libs.ktorServerContentNegotiationJvm)
-    implementation(libs.ktorServerJacksonJvm)
-    implementation(libs.ktorServerNettyJvm)
+    implementation(libs.bundles.ktor)
     implementation(libs.logback)
     testImplementation(libs.ktorServerTestsJvm)
     testImplementation(libs.kotlinTestJunit)

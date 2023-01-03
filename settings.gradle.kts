@@ -15,6 +15,14 @@ dependencyResolutionManagement {
             library("logback", "ch.qos.logback", "logback-classic").version(logbackVersion)
             library("ktorServerTestsJvm", "io.ktor", "ktor-server-tests-jvm").version(ktorVersion)
             library("kotlinTestJunit", "org.jetbrains.kotlin", "kotlin-test-junit").version(kotlinVersion)
+
+            bundle("ktor", listOf(
+                "ktorServerCoreJvm",
+                "ktorServerAuthJvm",
+                "ktorServerContentNegotiationJvm",
+                "ktorServerJacksonJvm",
+                "ktorServerNettyJvm"
+            ))
         }
     }
 }
